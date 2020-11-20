@@ -1,0 +1,397 @@
+		.root{
+			margin: 0px auto; 
+			width: 100%;
+			height: 100%;
+			
+		}
+
+		body{
+			margin:0;
+		}
+
+		#content{
+			height: auto;
+		}
+		/*#rightcontent{*/
+			/*background: orange;*/
+			/*height: 800px;*/
+		/*}*/
+		/*#leftcontent{*/
+			/*float: left;
+			width: 1px;*/
+			/*background: orange;*/
+			/*height: 850px;*/
+			/*height: auto;*/
+
+		/*}*/
+		#top{
+			height: 100px;
+		}
+
+		.menu{
+			margin: left;
+			display: flex;
+			justify-content: center;
+		}
+		.menu ul{
+			padding-left: 0;
+		}
+		.menu  ul li{
+			list-style: none; 
+			float: left;
+			padding: 10px 30px;
+
+		}
+		.menu ul li a{
+			position: relative;
+			text-decoration: none;
+			color: gray;
+			font-family: 'Quicksand', sans-serif;
+			font-size: 16px;
+		}
+		.menu ul li a:hover{
+			color: white; 			
+		}
+		.menu ul li ul{
+			display: none;
+		}
+
+		.menu-1{
+			position: absolute;
+			z-index: 10;
+		}
+		.menu-1 ul{
+			display: none;
+			left: 50%;
+			transform: translateX(-42%);
+		}
+		.menu ul li:hover .menu-1 ul{
+			display: block;
+			margin-top: 5px;
+		}
+		.menu-2{
+			position: absolute;
+			z-index: 10;
+		}
+		.menu-2 ul{
+			display: none;
+			left: 50%;
+			transform: translateX(-35%);
+		}
+		.menu ul li:hover .menu-2 ul{
+			display: block;
+		}
+
+		.search-box{
+			position: absolute;
+			transform: translate(-50%,-50%);
+			background: #2f3640;
+			/*height: 40px;*/
+			height: 60px;
+			border-radius: 40px;
+			padding: 10px;
+			/*top: 130px;*/
+			top: 120px;
+			left: 180px;
+		}
+		.search-box:hover > .search-txt{
+			width: 240px;
+			padding: 0 6px;
+
+		}
+		.search-btn{
+			/*color: #e84118;*/
+			float: right;
+			width: 40px;
+			/*height: 40px;*/
+			height: 49px;
+			border-radius: 50%;
+			background: #2f3640;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-decoration: none;
+		}
+		#search-icon{
+			color: beige;
+		}
+		#search-icon:hover{
+			color: yellow;
+			cursor: pointer;
+		}
+		.search-txt{
+			border: none;
+			background: none;
+			outline: none;
+			float: left; 
+			padding: 0;
+			color: white;
+			font-size: 16px;
+			transition: 0.5s;
+			line-height: 40px;
+			width: 0px;
+		}
+
+		.homepage{
+			display: flex;
+			justify-content: center;
+			width: 100%;
+		}
+
+		.account{
+			position: absolute;
+			color: gray;
+			font-size: 30px;
+			top: 99px;
+			right: 220px;
+			max-width: 1080px;
+			margin-left: auto;
+			margin-right: auto;
+			opacity: .3;
+			transition: ease 1s;
+		}
+		.account:hover > i, .account:hover{
+			color: black;
+			opacity: 1;
+			transition: ease 1s;
+			font-size: 36px;
+		}
+
+		#accountnone{
+			position: absolute;
+			color: gray;
+			font-size: 30px;
+			top: 107px;
+			right: 220px;
+			max-width: 1080px;
+			margin-left: auto;
+			margin-right: auto;
+			opacity: .3;
+			transition: ease 1s;
+		}
+		/*.cart{
+			position: absolute;
+			color: gray;
+			font-size: 30px;
+			top: 96px;
+			right: 120px;
+			max-width: 1080px;
+			margin-left: auto;
+			margin-right: auto;
+			opacity: .3;
+			transition: ease 1s;
+		}
+
+		.cart:hover > i, .cart:hover{
+			color: black;
+			opacity: 1;
+			transition: ease 1s;
+			font-size: 36px;
+		}*/
+
+		.svg-cart{
+			position: absolute;
+			width: 30px;
+			height: 30px;
+			color: gray;
+			top: 105px;
+			right: 170px;
+			opacity: .3;
+			transition: ease 1s;
+		}
+		.svg-cart:hover{
+			color: black;
+			opacity: 1;
+			transition: ease 1s;
+			width: 36px;
+			height: 36px;
+		}
+
+		.count-cart{
+			position: absolute;
+			font-size: 13px;
+			line-height: 1;
+			top: 116px;
+    		right: 181px;
+			text-align: center;
+			font-weight: bold;
+			/*overflow: hidden;*/
+		}
+		.cart-menu, .count-cart{
+			overflow: hidden;
+		}
+		
+		.count{
+			cursor: pointer;
+			color: black;
+			position: relative;
+			animation-name: keke;
+			animation-duration: 1s;
+		}
+
+		@keyframes keke{
+			0%{top: 0px; bottom: 0px;}
+			50%{top: 20px; bottom: 0px;}
+			100%{top: 0px; bottom:0px;}
+		}
+
+		.count:hover{
+			transition: top 150ms;
+			animation-duration: 300ms;
+		}
+
+		.order{
+			position: absolute;
+			color: gray;
+			font-size: 28px;
+			top: 100px;
+    		right: 125px;
+			max-width: 1080px;
+			margin-left: auto;
+			margin-right: auto;
+			opacity: .3;
+			transition: ease 1s;
+		}
+		.order:hover > i, .order:hover{
+			color: black;
+			opacity: 1;
+			transition: ease 1s;
+			font-size: 32px;
+		}
+
+		.id{
+			text-decoration: none;
+			font-family: 'Quicksand', sans-serif;
+			color: black;
+			float: right;
+			margin-top: -110px;
+			margin-right: 125px;
+		}
+		.id:hover{
+			color: red;
+			text-decoration: none;
+		}
+
+		#TShirt{
+			width: 100%;
+		}
+		#Shirt{
+			width: 100%;
+		}
+		#Jeans{
+			width: 100%;
+		}
+		ul.tshirt li{
+			list-style: none;
+			float: left;
+			text-align: center;
+			padding: 10px 70px;
+			margin-top: 50px;
+			margin-left: 67px;
+			transition: ease 0.5s;
+		}
+		ul.tshirt li:hover{
+			transition: ease 0.5s;
+			box-shadow: 2px -2px 12px silver;
+		}
+		ul.shirts li{
+			list-style: none;
+			float: left;
+			text-align: center;
+			padding: 10px 70px;
+			margin-top: 50px;
+			margin-left: 67px;
+			transition: ease 0.5s;
+		}
+		ul.shirts li:hover{
+			transition: ease 0.5s;
+			box-shadow: 2px -2px 12px silver;
+		}
+		ul.jeans li{
+			list-style: none;
+			float: left;
+			text-align: center;
+			padding: 10px 70px;
+			margin-top: 50px;
+			margin-left: 67px;
+			transition: ease 0.5s;
+		}
+		ul.jeans li:hover{
+			transition: ease 0.5s;
+			box-shadow: 2px -2px 12px silver;
+		}
+		ul.newproducts_owl li{
+			list-style: none;
+			float: left;
+			text-align: center;
+			padding: 10px 70px;
+			margin-top: 50px;
+		}
+		#Short-text{
+			font-family: 'Quicksand', sans-serif;
+			margin-left: 50px;
+		}
+		#notproducts{
+			color: gray;
+			font-size: 16px;
+			font-family: 'Quicksand', sans-serif;
+			margin-bottom: 850px;
+			margin-left: 0px;
+		}
+		#info{
+			font-family: 'Quicksand', sans-serif;
+			font-size: 15px;
+			color: gray;
+			text-align: center;
+			justify-content: center;
+		}
+		#slogan{
+			font-family: 'Amatic SC', cursive;
+			font-size: 37px;
+			color: gray;
+			text-align: center;
+			transition: 1s ease;
+		}
+		#slogan:hover{
+			font-size: 300%;
+			transition: 1s ease;
+			animation-delay: 0s;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+		}
+
+		.blog{
+			display: flex;
+			justify-content: center;
+		}
+
+		#footer{
+			width: 100%;
+			height: auto;
+			/*border:1px solid black;*/
+			background: #e3e1e2;
+			margin-top: 200px;
+			clear: both;
+		}
+		#footer .footer-p{
+			color: black;  
+			font-size: 14px;
+			text-align: center;
+			font-family:'Quicksand', sans-serif;
+
+		}
+		#footer .footer-icon{
+			/*border: 1px solid black;*/
+    		width: 100%;
+    		justify-content: center;
+    		display: flex;
+		}
+		#footer .footer-icon img:hover{
+			background: #97FFFF;
+
+		}
+		
+		
+
+		
+ 
