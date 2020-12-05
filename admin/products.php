@@ -92,7 +92,7 @@
 			            a.style.display = 'none';
 			        }
 			    }  
-		})
+		});
     </script>
 
 </body>
